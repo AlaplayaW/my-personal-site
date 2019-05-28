@@ -1,25 +1,6 @@
-// import React from 'react';
-// import './App.css';
-
-// import Nav from './Nav';
-// import About from './About';
-// import Shop from './Shop';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Nav />
-//       <About />
-//       <Shop />
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Nav from './Nav'
 import About from './About';
@@ -28,11 +9,24 @@ import Shop from './Shop';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Nav />
-      </div>
+      <Router>
+        <div className="App">
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home}/>
+            <Route path="/about" component={About}/>
+            <Route path="/shop" component={Shop}/>
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
+
+const Home = () => (
+  <div>
+    <h1>Home Page</h1>
+  </div>
+)
 
 export default App;
