@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Nav from './Nav'
-import About from './About';
-import Shop from './Shop';
+import Nav from './components/Nav';
+import Home from './pages/Home';
+import About from './pages/About';
+import DocsRedux from './pages/DocsRedux';
 
 class App extends Component {
   render() {
@@ -15,7 +16,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Home}/>
             <Route path="/about" component={About}/>
-            <Route path="/shop" component={Shop}/>
+            <Route path="/docsredux" component={DocsRedux}/>
           </Switch>
         </div>
       </Router>
@@ -23,10 +24,5 @@ class App extends Component {
   }
 }
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-)
 
 export default App;

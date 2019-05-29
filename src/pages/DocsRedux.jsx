@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
-import { Link } from 'react-router-dom';
+import '../App.css';
 import axios from 'axios';
 
 function DocsRedux() {
@@ -20,14 +19,15 @@ function DocsRedux() {
   }, []);
 
   return (
-    <ul>
+    <div>
       {data.hits.map(item => (
-        <li key={item.objectID}>
-          <Link to={item.url}>{item.title}</Link>
-        </li>
+          <>
+          <a href={item.url} key={item.objectID}>{item.title}</a>
+          <h4>{item.created_at}</h4>
+          </>
       ))}
-    </ul>
+    </div>
   );
 } 
 
-export default DocsReducs;
+export default DocsRedux;
