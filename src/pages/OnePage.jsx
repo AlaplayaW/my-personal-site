@@ -1,5 +1,5 @@
 import React from "react";
-import TypedName from "./TypedName";
+import Home from "./Home";
 import About from "./About";
 import DocsRedux from "./DocsRedux";
 import Nav from "../components/Nav";
@@ -9,7 +9,7 @@ function OnePage() {
 	
 	return (
 		<div>
-			<TypedName />
+			<Home />
 			<Nav />
 			<About />
 			<DocsRedux />
