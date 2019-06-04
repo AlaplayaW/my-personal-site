@@ -21,10 +21,10 @@ function DocsRedux() {
   return (
     <div>
       {data.hits.map(item => (
-          <>
-          <a href={item.url} key={item.objectID}>{item.title}</a>
+          <React.Fragment key={item.objectID}>
+          <a href={item.url}>{item.title}</a>
           <h4>{item.created_at}</h4>
-          </>
+          </React.Fragment>
       ))}
     </div>
   );
