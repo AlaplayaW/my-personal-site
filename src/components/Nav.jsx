@@ -24,6 +24,7 @@ class Nav extends React.Component {
 			? (document.body.style.paddingBottom = `${this.state.height}px`)
 			: (document.body.style.paddingBottom = 0);
 	}
+	
 	render() {
 		return (
 			<nav className={this.state.scroll < this.state.top 

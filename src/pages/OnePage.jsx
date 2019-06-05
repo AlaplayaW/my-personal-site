@@ -3,6 +3,7 @@ import Home from "./Home";
 import About from "./About";
 import DocsRedux from "./DocsRedux";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 
 function OnePage() {
@@ -13,6 +14,7 @@ function OnePage() {
 			<Nav />
 			<About />
 			<DocsRedux />
+			<Footer />
 		</div>
 	);
 }

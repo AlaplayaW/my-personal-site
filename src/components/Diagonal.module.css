@@ -1,0 +1,22 @@
+.homeleft, .homeright {
+  stroke: #fff;
+  stroke-width: 4;
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  fill: #fff;
+}
+.homeleft{
+  left: 0;
+}
+.homeright{
+  right: 0;
+}
+.diagonal{
+  grid-column: 1 / span last;
+  grid-row: last;
+  pointer-events: none;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}

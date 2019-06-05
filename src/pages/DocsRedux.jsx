@@ -1,33 +1,37 @@
-import React, {useEffect, useState} from 'react';
-import '../App.css';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import "../App.css";
+import axios from "axios";
+import Diagonal from "../components/Diagonal";
+import styles from "./DocsRedux.module.css";
 
 function DocsRedux() {
+	const [data, setData] = useState({ hits: [] });
 
-  const [data, setData] = useState({ hits: [] });
+	useEffect(() => {
+		const fetchData = async () => {
+			const result = await axios(
+				"http://hn.algolia.com/api/v1/search?query=redux"
+			);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        'http://hn.algolia.com/api/v1/search?query=redux',
-      );
+			setData(result.data);
+		};
 
-      setData(result.data);
-    };
+		fetchData();
+	}, []);
 
-    fetchData();
-  }, []);
-
-  return (
-    <div>
-      {data.hits.map(item => (
-          <React.Fragment key={item.objectID}>
-          <a href={item.url}>{item.title}</a>
-          <h4>{item.created_at}</h4>
-          </React.Fragment>
-      ))}
-    </div>
-  );
-} 
+	return (
+		<div className={styles.docs}>
+			<div>
+				{data.hits.map(item => (
+					<React.Fragment key={item.objectID}>
+						<a href={item.url}>{item.title}</a>
+						<h4>{item.created_at}</h4>
+					</React.Fragment>
+				))}
+			</div>
+			<Diagonal />
+		</div>
+	);
+}
 
 export default DocsRedux;

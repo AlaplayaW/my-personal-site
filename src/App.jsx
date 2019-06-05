@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// import Nav from './components/Nav';
 import OnePage from './pages/OnePage';
 import About from './pages/About';
 import DocsRedux from './pages/DocsRedux';
@@ -12,7 +11,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* <Nav /> */}
           <Switch>
             <Route path="/" exact component={OnePage}/>
             <Route path="/about" component={About}/>
