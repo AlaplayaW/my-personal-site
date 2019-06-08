@@ -7,7 +7,7 @@ function CustomTyped({customStrings}) {
 			strings={customStrings}
 			typeSpeed={60}
 			backSpeed={30}
-			backDelay={1000}
+			backDelay={2000}
 			loop
 			loopCount={2}
 		/>

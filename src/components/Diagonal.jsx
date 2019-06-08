@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Diagonal.module.css";
 
-function Diagonal(color) {
+function Diagonal() {
 	return (
 		<div className={styles.diagonal}>
 			<svg

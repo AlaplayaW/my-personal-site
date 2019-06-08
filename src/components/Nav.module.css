@@ -1,11 +1,11 @@
 nav{
+  display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
   min-height: 10vh;
   background: white;
   color: black;
-  width: 100%;
-  display: flex;
 }
 
 .navLinks{
@@ -21,13 +21,16 @@ nav{
 }
 .noNav{
   display: none;
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 .fixedNav {
   position: sticky;
   z-index: 1000;
   top: 0;
-  box-shadow: 0 1px 20px -6px #777;
-  display: flex;
-  transition: all 1s ease-out;
+  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
+  transition: all 3s ease;
+  opacity: 1;
 }
 

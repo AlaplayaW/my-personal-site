@@ -10,8 +10,8 @@ function OnePage() {
 	
 	return (
 		<div>
-			<Home />
 			<Nav />
+			<Home />
 			<About />
 			<DocsRedux />
 			<Footer />

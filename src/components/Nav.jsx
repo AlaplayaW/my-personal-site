@@ -1,35 +1,38 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 
-class Nav extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-		this.handleScroll = this.handleScroll.bind(this);
+const Nav = (props) => {
+
+	const [scroll, setScroll] = useState(0);
+	const [top, setTop] = useState(0);
+	// const [height, setHeight] = useState(0);
+
+	const handleScroll = () => {
+		setScroll(window.scrollY);
 	}
 
-	handleScroll() {
-		this.setState({ scroll: window.scrollY });
-	}
-
-	componentDidMount() {
+	// componentDidMount()
+	useEffect(() => {
 		const el = document.querySelector("nav");
-		this.setState({ top: el.offsetTop, height: el.offsetHeight });
-		window.addEventListener("scroll", this.handleScroll);
-	}
+		console.log(el.offsetTop, el.offsetHeight);
+		setTop(el.offsetTop)
+		// setHeight(el.offsetHeight);
+		window.addEventListener("scroll", handleScroll);	
+	}, []);
 
-	componentDidUpdate() {
-		this.state.scroll > this.state.top
-			? (document.body.style.paddingBottom = `${this.state.height}px`)
-			: (document.body.style.paddingBottom = 0);
-	}
+	// componentDidUpdate()
+	// useEffect(() => {
+	// 		scroll > top
+	// 			? (document.body.style.paddingBottom = `${height}px`)
+	// 			: (document.body.style.paddingBottom = 0);
+	// }, [scroll, top, height]
+	// );
 	
-	render() {
-		return (
-			<nav className={this.state.scroll < this.state.top 
-			? `${styles.noNav}` 
-			: `${styles.fixedNav}`}>
+	return (
+			<nav className={scroll < top 
+				? `${styles.noNav}` 
+				: `${styles.fixedNav}`}>
 				<h3>Logo</h3>
 				<ul className={styles.navLinks}>
 					<NavLink to="/">
@@ -44,7 +47,8 @@ class Nav extends React.Component {
 				</ul>
 			</nav>
 		);
-	}
+
 }
+
 
 export default Nav;
