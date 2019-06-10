@@ -13,7 +13,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route path="/" exact component={OnePage}/>
-            <Route path="/about" component={About}/>
+            {/* <Route path="/about" component={About}/> */}
             <Route path="/docsredux" component={DocsRedux}/>
           </Switch>
         </div>

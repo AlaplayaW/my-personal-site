@@ -20,17 +20,18 @@ nav{
   text-decoration: none;
 }
 .noNav{
-  display: none;
+  visibility: hidden;
   position: absolute;
   top: 0;
   opacity: 0;
 }
 .fixedNav {
-  position: sticky;
+  visibility: visible;
+  position: fixed;
   z-index: 1000;
   top: 0;
   box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.18);
-  transition: all 3s ease;
+  transition: all 1s ease;
   opacity: 1;
 }
 

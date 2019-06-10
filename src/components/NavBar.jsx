@@ -30,7 +30,7 @@ const Nav = (props) => {
 	// );
 	
 	return (
-			<nav className={scroll < top-1 
+			<nav className={scroll < top-10 
 				? `${styles.noNav}` 
 				: `${styles.fixedNav}`}>
 				<h3>Logo</h3>
