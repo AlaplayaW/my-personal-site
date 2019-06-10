@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import styles from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 
-const Nav = (props) => {
+const NavBar = (props) => {
 
 	const [scroll, setScroll] = useState(0);
 	const [top, setTop] = useState(0);
@@ -51,4 +51,4 @@ const Nav = (props) => {
 }
 
 
-export default Nav;
+export default NavBar;
