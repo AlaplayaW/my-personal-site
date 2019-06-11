@@ -6,17 +6,19 @@
 .Header div{
   display: grid;
   grid-template-areas: "logo nav";
-  grid-template-rows: 80px;
   background: white;
   color: black;
+  min-height: 70px;
 }
 .Header img{
   height: 100%;
+  grid-area: logo;
 }
 .navLinks{
-  grid-area: "nav";
+  grid-area: nav;
   display: grid;
   grid-template-columns: repeat(3, auto);
+  grid-template-rows: 70px;
   align-items: center;
   justify-items: center;
 }
@@ -34,4 +36,40 @@
   transition: all 1s ease;
   opacity: 0.95;
 }
+.Burger{
+  display: none;
+  grid-area: burger;
+  margin: 0 20px 0 0;
+  padding: 0;
+  justify-self: end;
+  font-size: 40px;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.1s;
+}
+.Burger:active {
+  transform: scale(1.2);
+}
 
+@media (max-width: 700px) {
+  .Header div{
+    grid-template-areas: "logo burger" "nav nav";
+    grid-template-rows: 70px auto;
+    height: 70px;
+  }
+  .navLinks{
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+
+    padding: 30px 0 30px;
+    background: rgba(40, 44, 47, 0.95);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .Burger {
+    display: inline;
+  }
+}

@@ -3,30 +3,45 @@ import styles from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 
 const NavBar = props => {
-	const [scroll, setScroll] = useState();
-	const [top, setTop] = useState();
-	// const [height, setHeight] = useState(0);
+	const [scroll, setScroll] = useState(0);
+	const [top, setTop] = useState(0);
+	const [isNavVisible, setIsNavVisible] = useState(false);
+	const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+
+	// componentDidMount()
+	useEffect(() => {
+
+		const el = document.querySelector("header");
+		console.log(el.offsetTop, el.offsetHeight);
+		setTop(el.offsetTop);
+		window.addEventListener("scroll", handleScroll);
+
+		const mediaQuery = window.matchMedia("(max-width: 700px)");
+		mediaQuery.addListener(handleMediaQueryChange);
+		handleMediaQueryChange(mediaQuery);
+		return () => {
+			mediaQuery.removeListener(handleMediaQueryChange);
+		};
+
+	}, []);
 
 	const handleScroll = () => {
 		setScroll(window.scrollY);
 	};
 
-	// componentDidMount()
-	useEffect(() => {
-		const el = document.querySelector("header");
-		console.log(el.offsetTop, el.offsetHeight);
-		setTop(el.offsetTop);
-		// setHeight(el.offsetHeight);
-		window.addEventListener("scroll", handleScroll);
-	}, []);
+	const toggleNav = () => {
+		setIsNavVisible(!isNavVisible);
+	};
 
-	// componentDidUpdate()
-	// useEffect(() => {
-	// 		scroll > top
-	// 			? (document.body.style.paddingBottom = `${height}px`)
-	// 			: (document.body.style.paddingBottom = 0);
-	// }, [scroll, top, height]
-	// );
+	const handleMediaQueryChange = mediaQuery => {
+		if (mediaQuery.matches) {
+			setIsSmallScreen(true);
+		} else {
+			setIsSmallScreen(false);
+		}
+	};
+
 	const headerClassName = `${(scroll < top-10) ? styles.noNav : styles.fixedNav}`
 	
 	
@@ -35,11 +50,13 @@ const NavBar = props => {
 		<header className={styles.Header} id="NavBar">
 			<div className={headerClassName}>
 				<img className="Logo" src={require("../assets/logo.svg")} alt="logo" />
-				<nav className={`${styles.navLinks} Nav`}>
+				{(!isSmallScreen || isNavVisible) && (
+				<nav className={`${styles.navLinks} nav`}>
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/about">About</NavLink>
 					<NavLink to="/docsredux">Redux Docs</NavLink>
-				</nav>
+				</nav>)}
+				<button onClick={toggleNav} className={`${styles.Burger} burger`} >X</button>
 			</div>
 		</header>
 	);
