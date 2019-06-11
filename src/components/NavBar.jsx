@@ -1,24 +1,23 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 
-const NavBar = (props) => {
-
-	const [scroll, setScroll] = useState(0);
-	const [top, setTop] = useState(0);
+const NavBar = props => {
+	const [scroll, setScroll] = useState();
+	const [top, setTop] = useState();
 	// const [height, setHeight] = useState(0);
 
 	const handleScroll = () => {
 		setScroll(window.scrollY);
-	}
+	};
 
 	// componentDidMount()
 	useEffect(() => {
-		const el = document.querySelector("nav");
+		const el = document.querySelector("header");
 		console.log(el.offsetTop, el.offsetHeight);
-		setTop(el.offsetTop)
+		setTop(el.offsetTop);
 		// setHeight(el.offsetHeight);
-		window.addEventListener("scroll", handleScroll);	
+		window.addEventListener("scroll", handleScroll);
 	}, []);
 
 	// componentDidUpdate()
@@ -28,27 +27,22 @@ const NavBar = (props) => {
 	// 			: (document.body.style.paddingBottom = 0);
 	// }, [scroll, top, height]
 	// );
+	const headerClassName = `${(scroll < top-10) ? styles.noNav : styles.fixedNav}`
+	
 	
 	return (
-			<nav className={scroll < top-10 
-				? `${styles.noNav}` 
-				: `${styles.fixedNav}`}>
-				<h3>Logo</h3>
-				<ul className={styles.navLinks}>
-					<NavLink to="/">
-						<li>Home</li>
-					</NavLink>
-					<NavLink to="/about">
-						<li>About</li>
-					</NavLink>
-					<NavLink to="/docsredux">
-						<li>Redux Docs</li>
-					</NavLink>
-				</ul>
-			</nav>
-		);
-
-}
-
+		
+		<header className={styles.Header} id="NavBar">
+			<div className={headerClassName}>
+				<img className="Logo" src={require("../assets/logo.svg")} alt="logo" />
+				<nav className={`${styles.navLinks} Nav`}>
+					<NavLink to="/">Home</NavLink>
+					<NavLink to="/about">About</NavLink>
+					<NavLink to="/docsredux">Redux Docs</NavLink>
+				</nav>
+			</div>
+		</header>
+	);
+};
 
 export default NavBar;

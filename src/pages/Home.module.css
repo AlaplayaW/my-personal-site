@@ -8,7 +8,7 @@
 }
 
 .imgStyle {
-	background: no-repeat url(../Overlay.png) top content-box / cover ;
+	background: no-repeat url(../assets/Overlay.png) top content-box / cover ;
 	filter: sepia(1);
 	-webkit-filter: sepia(1);
 	grid-column: 1 / all;

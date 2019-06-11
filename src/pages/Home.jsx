@@ -14,7 +14,7 @@ function Home() {
 			<div className={styles.imgStyle} />
 			<Link 
 			activeClass="active"
-			to="about"
+			to="NavBar"
 			spy={true}
 			smooth={true}
 			offset={0}

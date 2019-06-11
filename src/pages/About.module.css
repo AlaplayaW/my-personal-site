@@ -17,14 +17,14 @@
   pointer-events: none;
   background: #fff;
   float: left;
-  z-index: 1000;
+  z-index: 3;
 }
 .homeleft{
   position: absolute;
   bottom: 0;
   left: 0;
   background: none;
-  z-index: 99;
+  z-index: 3;
 }
 
 .homeright{
@@ -32,7 +32,7 @@
   bottom: 0;
   right: 0 !important;
   background: none;
-  z-index: 99;
+  z-index: 3;
   left: auto;
 }
 
