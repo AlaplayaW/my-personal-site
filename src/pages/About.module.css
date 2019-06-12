@@ -1,14 +1,17 @@
 .about {
-  background-image:linear-gradient(white, rgb(233, 231, 231));
+  background-image:linear-gradient(white, rgb(235, 235, 235));
 	width: 100%;
 	height: 100vh;
   position: relative;
   text-align: unset;
 	display: grid;
-  grid-template-columns: 2fr 4fr 1fr;
+	grid-template-columns: 1fr 80vw 1fr;
   grid-template-rows: 1fr 3fr 1fr 3fr;
-  padding-top: 50px;
-};
+  padding-top: 30px;
+}
+.titre{
+  grid-column: 2/3;
+}
 
 .diagonal{
   position: absolute;

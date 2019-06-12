@@ -23,13 +23,14 @@ function Home() {
 			>
 				<FontAwesomeIcon icon={faAngleDoubleDown} size="2x" /></Link>
 			<h1 className={styles.typed}>
-				Hello, I am Perrine! <br />
-				Searching for{" "}
+				Hi, I am Perrine!
+				<h2>Searching for{" "}
 				<span>
 					<CustomTyped
 						customStrings={["an internship", "a job of Junior Developper"]}
 					/>
 				</span>
+				</h2>
 			</h1>
 			<SocialBar />
 			<Diagonal />

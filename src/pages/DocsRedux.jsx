@@ -21,9 +21,9 @@ function DocsRedux() {
 	}, []);
 
 	return (
-		<div>
-			<Nav />
+		<div className={styles.docPage}>
 			<div className={styles.docs}>
+				<h1>Docs Redux</h1>
 				{data.hits.map(item => (
 					<React.Fragment key={item.objectID}>
 						<a href={item.url}>{item.title}</a>

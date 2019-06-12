@@ -29,9 +29,13 @@
 	grid-row: 1/2;
 	align-self: end;
   color: white;
+	font-size: 4rem;
+}
+
+.typed h2{
+	animation-name: opacity;
+	animation-duration: 5s;
   font-size: 2rem;
-  animation-name: opacity;
-  animation-duration: 5s;
 }
 .socialIcons {
 	color: #fff;
@@ -80,4 +84,10 @@
 }
 #about{
 	scroll-behavior: smooth;
+}
+
+@media (max-width: 700px) {
+	.home h1{
+		font-size: 32px;
+	}
 }
