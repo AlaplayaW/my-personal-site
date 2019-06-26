@@ -7,7 +7,7 @@ function Diagonal() {
 			<svg
 				className={styles.homeleft}
 				width="30%"
-				height="22vh"
+				height="20vh"
 				viewBox="0 0 100 100"
 				preserveAspectRatio="none"
 			>
@@ -16,7 +16,7 @@ function Diagonal() {
 			<svg
 				className={styles.homeright}
 				width="70%"
-				height="22vh"
+				height="20vh"
 				viewBox="0 0 100 100"
 				preserveAspectRatio="none"
 			>

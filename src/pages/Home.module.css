@@ -1,16 +1,22 @@
 .home {
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
 	text-align: unset;
 	display: grid;
-	grid-template-columns: 1fr 80vw 1fr;
+	grid-template-columns: 10vw auto 10vw;
   grid-template-rows: 50% 15% 25% 10%;
 }
 
 .imgStyle {
-	background: no-repeat url(../assets/Overlay.png) top content-box / cover ;
-	filter: sepia(1);
-	-webkit-filter: sepia(1);
+	/* background: no-repeat url(../assets/Overlay.png) top content-box / cover ; */
+	/* filter: sepia(1);
+	-webkit-filter: sepia(1); */
+	background: no-repeat url(	https://www.muralswallpaper.com/app/uploads/california-palms-beach-plain-820x532.jpg) top content-box / cover ;
+
+	filter: grayscale(100%) opacity(50%);
+	-webkit-filter: grayscale(100%) opacity(50%);
+	overflow: hidden;
+
 	grid-column: 1 / all;
 	grid-row: 1 / all;
 	z-index: -1;
@@ -28,7 +34,7 @@
 	grid-column: 2/3;
 	grid-row: 1/2;
 	align-self: end;
-  color: white;
+  color: black;
 	font-size: 4rem;
 }
 
@@ -38,7 +44,7 @@
   font-size: 2rem;
 }
 .socialIcons {
-	color: #fff;
+  color: black;
 	height: 20px;
   padding-right: 10px;
 }

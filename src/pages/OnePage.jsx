@@ -11,9 +11,8 @@ function OnePage() {
 	
 	return (
 		<div>
-			{/* <Nav /> */}
-			<Home />
 			<NavBar />
+			<Home />
 			<About />
 			<DocsRedux />
 			<Footer />

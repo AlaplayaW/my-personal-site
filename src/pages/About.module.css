@@ -4,42 +4,22 @@
 	height: 100vh;
   position: relative;
   text-align: unset;
-	display: grid;
-	grid-template-columns: 1fr 80vw 1fr;
-  grid-template-rows: 1fr 3fr 1fr 3fr;
-  padding-top: 30px;
+  display: grid;
+	grid-template-columns: 10vw max-content auto 10vw ;
+  grid-template-rows: 80px max-content auto 80px;
+}
+.img{
+  grid-column: 2/3;
+  grid-row: 2/4;
+  height: 100%;
 }
 .titre{
-  grid-column: 2/3;
+  grid-row: 2/3;
+  grid-column: 3/4;
+  padding-left: 30px;
 }
-
-.diagonal{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  pointer-events: none;
-  background: #fff;
-  float: left;
-  z-index: 3;
-}
-.homeleft{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: none;
-  z-index: 3;
-}
-
-.homeright{
-  position: absolute;
-  bottom: 0;
-  right: 0 !important;
-  background: none;
-  z-index: 3;
-  left: auto;
-}
-
-.homeleft, .homeright path {
-  stroke: white;
-  stroke-width: 4;
+.texte{
+  grid-row: 3/4;
+  grid-column: 3/4;
+  padding-left: 30px;
 }
