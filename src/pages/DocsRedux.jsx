@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
+import "../App.scss";
 import axios from "axios";
 import Diagonal from "../components/Diagonal";
-import styles from "./DocsRedux.module.css";
+import styles from "./DocsRedux.module.scss";
 import Nav from "../components/Nav";
 
 function DocsRedux() {

@@ -6,7 +6,7 @@ import Diagonal from "../components/Diagonal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 
 function Home() {
 	return (
