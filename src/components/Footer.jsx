@@ -1,9 +1,12 @@
-import React from 'react';
-
-
+import React from "react";
 
 const Footer = () => {
-  return ( <div style={{height:"100px", backgroundColor:"grey"}}>FOOTER</div> );
-}
- 
+	return ( 
+    <div className="footer">
+      FOOTER
+      <p>coucou</p>
+    </div>
+  )
+  };
+
 export default Footer;

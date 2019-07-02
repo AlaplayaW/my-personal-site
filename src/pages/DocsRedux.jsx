@@ -3,7 +3,6 @@ import "../App.scss";
 import axios from "axios";
 import Diagonal from "../components/Diagonal";
 import styles from "./DocsRedux.module.scss";
-import Nav from "../components/Nav";
 
 function DocsRedux() {
 	const [data, setData] = useState({ hits: [] });
@@ -21,7 +20,7 @@ function DocsRedux() {
 	}, []);
 
 	return (
-		<div className={styles.docPage}>
+		<div className="reduxPage">
 			<div className={styles.docs}>
 				<h1>Docs Redux</h1>
 				{data.hits.map(item => (

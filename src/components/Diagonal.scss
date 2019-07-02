@@ -1,0 +1,21 @@
+.diagonal{
+  pointer-events: none;
+  z-index: 3;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  .homeleft, .homeright {
+    stroke: #fff;
+    stroke-width: 4;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    fill: #fff;
+  }
+  .homeleft{
+    left: 0;
+  }
+  .homeright{
+    right: 0;
+  }
+}

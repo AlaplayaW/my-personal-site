@@ -1,0 +1,54 @@
+@import "../sass/variables.scss";
+
+.about {
+  background-image:linear-gradient(white, rgb(235, 235, 235));
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  h1 {
+    font-size: 1.5rem;
+
+  }
+
+  img{
+    height: 40vh;
+    margin: 0 10vw 0 10vw;
+    border-radius: 10px;
+    border: 10px solid white;
+    box-shadow: 20px 20px 20px 0px rgb(206, 206, 206);
+  }
+  .textArea{
+    height: 40vh;
+    width: 40vw;
+    padding: 20px;
+    .texte{
+      text-align: justify;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    img{
+      height: 25vh;
+      margin: 3vh 0;
+    }
+    .textArea{
+      height: 40vh;
+      width: 70vw;
+      margin: 0 10vw;
+      .titre{
+      text-align: center;
+      }
+      .texte{
+      text-align: justify;
+      }
+    }
+  }  
+}

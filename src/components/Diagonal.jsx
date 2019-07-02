@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Diagonal.module.scss";
+import "./Diagonal.scss";
 
 function Diagonal() {
 	return (
-		<div className={styles.diagonal}>
+		<div className="diagonal">
 			<svg
-				className={styles.homeleft}
+				className="homeleft"
 				width="30%"
 				height="20vh"
 				viewBox="0 0 100 100"
@@ -14,7 +14,7 @@ function Diagonal() {
 				<path d="M0 100 L100 100 L0 10 Z" />
 			</svg>
 			<svg
-				className={styles.homeright}
+				className="homeright"
 				width="70%"
 				height="20vh"
 				viewBox="0 0 100 100"

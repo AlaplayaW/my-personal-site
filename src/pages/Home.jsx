@@ -6,33 +6,39 @@ import Diagonal from "../components/Diagonal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
-import styles from "./Home.module.scss";
+import surfboardOnTheBeach from "../assets/surfboardOnTheBeach.jpg";
+
+import "./Home.scss";
 
 function Home() {
 	return (
-		<div className={styles.home}>
-			<div className={styles.imgStyle} />
-			<Link 
-			activeClass="active"
-			to="NavBar"
-			spy={true}
-			smooth={true}
-			offset={0}
-			duration= {500}
-			className={styles.bounce}
-			>
-				<FontAwesomeIcon icon={faAngleDoubleDown} size="2x" /></Link>
-			<h1 className={styles.typed}>
+		<div className="home">
+			<img src={surfboardOnTheBeach} alt="surfboard on the beach" />
+			<h1 className="typed">
 				Hi, I am Perrine!
-				<h2>Searching for{" "}
-				<span>
-					<CustomTyped
-						customStrings={["an internship", "a job of Junior Developper"]}
-					/>
-				</span>
+				<h2>
+					Searching for{" "}
+					<span>
+						<CustomTyped
+							customStrings={["an internship", "a job of Junior Developper"]}
+						/>
+					</span>
 				</h2>
 			</h1>
 			<SocialBar />
+
+			{/* Click on double angle down to go to about section  */}
+			<Link
+				activeClass="active"
+				to="about"
+				spy={true}
+				smooth={true}
+				offset={0}
+				duration={500}
+				className="bounce"
+			>
+				<FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
+			</Link>
 			<Diagonal />
 		</div>
 	);

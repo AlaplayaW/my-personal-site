@@ -37,7 +37,6 @@ const NavBar = props => {
 	return (
 		<header className={styles.Header} id="NavBar">
 			<div className={styles.fixedNav}>
-				<img className="Logo" src="https://thatshirt.com/wp-content/uploads/2017/12/thatshirt-t-shirt-clip-art-tropical-cat_2-surfboards-crossed-670595.jpg" alt="logo" />
 				{(!isSmallScreen || isNavVisible) && (
 				<nav className={`${styles.navLinks} nav`}>
 					<NavLink to="/">Home</NavLink>

@@ -1,29 +1,28 @@
 @import "../sass/variables.scss";
 
 .home {
-	width: 100%;
-	height: 90vh;
+	height: 100vh;
 	text-align: unset;
+	position: relative;
 	display: grid;
 	grid-template-columns: 10vw auto 10vw;
-  grid-template-rows: 50% 15% 25% 10%;
+	grid-template-rows: 50% 15% 25% 10%;
+	
+	img {
+		width: 100%;
+		height: 100vh;
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		filter: grayscale(100%) opacity(100%) blur(0px) brightness(40%);
+		-webkit-filter: grayscale(100%) opacity(100%) blur(0px) brightness(40%);
+		overflow: hidden;
+	
+		grid-column: 1 / all;
+		grid-row: 1 / all;
+		z-index: -1;
+	}
 }
 
-.imgStyle {
-	/* background: no-repeat url(../assets/Overlay.png) top content-box / cover ; */
-
-	background: no-repeat url(https://www.muralswallpaper.com/app/uploads/california-palms-beach-plain-820x532.jpg) top content-box / cover ;
-	background-position: top;
-	-webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-	filter: sepia(100%) opacity(50%) blur(3px);
-	-webkit-filter: sepia(100%) opacity(50%) blur(3px);
-	overflow: hidden;
-
-	grid-column: 1 / all;
-	grid-row: 1 / all;
-	z-index: -1;
-}
 @keyframes opacity {
   from {
       opacity: 0;
@@ -37,17 +36,18 @@
 	grid-column: 2/3;
 	grid-row: 1/2;
 	align-self: end;
-  color: $text-color-dark;
-	font-size: 4rem;
+  color: $text-color-grey;
+	font-size: 2.5rem;
+	h2{
+		color: $text-color-light;
+		animation-name: opacity;
+		animation-duration: 5s;
+		font-size: 1.5rem;
+	}
 }
 
-.typed h2{
-	animation-name: opacity;
-	animation-duration: 5s;
-  font-size: 2rem;
-}
 .socialIcons {
-  color: $text-color-dark;
+  color: $text-color-grey;
 	height: 20px;
   padding-right: 10px;
 }
@@ -60,12 +60,12 @@
 .bounce {
 	grid-column: 2/3;
 	grid-row: 3/4;
-  color: $text-color-dark;
+  color: $text-color-grey;
 	-webkit-animation-name: bounce;
   animation-name: bounce;
   animation-duration: 2s;
   animation-iteration-count: 5;
-  font-size: 15px;
+	font-size: 15px;
   text-align: left;
 }
 @keyframes bounce {
@@ -96,7 +96,10 @@
 }
 
 @media (max-width: 700px) {
-	.home h1{
-		font-size: 32px;
+	.typed {
+		font-size: 2rem;
+	  h2{
+		font-size: 1rem;
 	}
+}
 }

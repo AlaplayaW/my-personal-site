@@ -1,4 +1,23 @@
 .App{
   font-family: "Montserrat", sans-serif;
+  
+  display: grid;
+  grid-template-columns: 100% ;
+  grid-template-rows: auto 1fr 8vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  .header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+  }
+  .homePage, .reduxPage {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+  }
 }
 

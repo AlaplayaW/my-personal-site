@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Nav.module.scss";
 import { NavLink } from "react-router-dom";
+import "./Nav.scss";
 
 const NavBar = props => {
 	const [scroll, setScroll] = useState(0);
-	const [top, setTop] = useState(0);
+	const [top, setTop] = useState();
 	const [isNavVisible, setIsNavVisible] = useState(false);
 	const [isSmallScreen, setIsSmallScreen] = useState(false);
 
@@ -12,7 +12,7 @@ const NavBar = props => {
 	// componentDidMount()
 	useEffect(() => {
 
-		const el = document.querySelector("header");
+		const el = document.querySelector(".about");
 		console.log(el.offsetTop, el.offsetHeight);
 		setTop(el.offsetTop);
 		window.addEventListener("scroll", handleScroll);
@@ -42,21 +42,21 @@ const NavBar = props => {
 		}
 	};
 
-	const headerClassName = `${(scroll < top-10) ? styles.noNav : styles.fixedNav}`
+	const headerClassName = `${(scroll < top - 70) ? "transpNav" : "whiteNav"}`
 	
 	
 	return (
 		
-		<header className={styles.Header} id="NavBar">
-			<div className={headerClassName}>
-				<img className="Logo" src="https://thatshirt.com/wp-content/uploads/2017/12/thatshirt-t-shirt-clip-art-tropical-cat_2-surfboards-crossed-670595.jpg" alt="logo" />
+		<header className="">
+			<div className={`${headerClassName} header`}>
+				<img src={require("../assets/logo.svg")} className="logo" alt="logo" />
 				{(!isSmallScreen || isNavVisible) && (
-				<nav className={`${styles.navLinks} nav`}>
+				<nav className="navLinks">
 					<NavLink to="/">Home</NavLink>
 					<NavLink to="/about">About</NavLink>
 					<NavLink to="/docsredux">Redux Docs</NavLink>
 				</nav>)}
-				<button onClick={toggleNav} className={`${styles.Burger} burger`} >X</button>
+				<button onClick={toggleNav} className="burger" >X</button>
 			</div>
 		</header>
 	);
