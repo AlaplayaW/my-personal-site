@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../App.css";
+import "../App.scss";
 import axios from "axios";
 import Diagonal from "../components/Diagonal";
-import styles from "./DocsRedux.module.css";
-import Nav from "../components/Nav";
+import styles from "./DocsRedux.module.scss";
 
 function DocsRedux() {
 	const [data, setData] = useState({ hits: [] });
@@ -21,9 +20,9 @@ function DocsRedux() {
 	}, []);
 
 	return (
-		<div>
-			<Nav />
+		<div className="reduxPage">
 			<div className={styles.docs}>
+				<h1>Docs Redux</h1>
 				{data.hits.map(item => (
 					<React.Fragment key={item.objectID}>
 						<a href={item.url}>{item.title}</a>
