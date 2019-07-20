@@ -1,12 +1,12 @@
 import React from "react";
 
-import CustomTyped from "../components/CustomTyped";
 import SocialBar from "../components/SocialBar";
 import Diagonal from "../components/Diagonal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
 import surfboardOnTheBeach from "../assets/surfboardOnTheBeach.jpg";
+import MyTyped from "../components/MyTyped";
 
 import "./Home.scss";
 
@@ -15,18 +15,15 @@ function Home() {
 		<div className="home">
 			<img src={surfboardOnTheBeach} alt="surfboard on the beach" />
 			<h1 className="typed">
-				Hi, I am Perrine!
+				Welcome, I am Perrine!
 				<h2>
 					Searching for{" "}
-					<span>
-						<CustomTyped
-							customStrings={["an internship", "a job of Junior Developper"]}
+					<MyTyped
+						dataText={["an internship", "a job of Junior Developper"]}
 						/>
-					</span>
 				</h2>
 			</h1>
 			<SocialBar />
-
 			{/* Click on double angle down to go to about section  */}
 			<Link
 				activeClass="active"
