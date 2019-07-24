@@ -1,22 +1,25 @@
-@import "../sass/variables.scss";
+@import "../sass/main.scss";
 
 .header {
 
 		display: grid;
-    grid-template-areas: "logo navbar";
+    grid-template-areas: "logo logo navbar";
     width: 100vw;
     height: 10vh;
     z-index: 10;
   .logo {
-    visibility: hidden;
+    visibility: visible;
     grid-area: logo;
-    height: 8vh;
-    align-self: center;
+    height: 100%;
+    margin-left:20px;
+    color: white;
+    display: flex;
+    align-items: center;
   }
 	.navLinks {
     grid-area: navbar;
 		display: grid;
-		grid-template-columns: repeat(3, auto);
+		grid-template-columns: repeat(4, auto);
 		align-items: center;
 		justify-items: center;
 
@@ -73,12 +76,15 @@
         grid-template-rows: 10vh auto;
         grid-template-areas: " logo burger" "navbar navbar"; 
       .navLinks {
+        a {
+          color: $text-color-light;
+        }
         grid-template-rows: repeat(3, auto);
         grid-template-columns: none;
         grid-row-gap: 20px;
     
         padding: 30px 0 30px;
-        background: rgba(40, 44, 47, 0.95);
+        background: transparentize($color: $grey, $amount: 0.1);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;      

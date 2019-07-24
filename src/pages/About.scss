@@ -1,10 +1,11 @@
-@import "../sass/variables.scss";
+@import "../sass/main.scss";
 
 .about {
   background-image:linear-gradient(white, rgb(235, 235, 235));
   height: 100vh;
   width: 100%;
   position: relative;
+  margin: auto;
 
   display: flex;
   flex-flow: row wrap;
@@ -13,20 +14,19 @@
   align-content: center;
   h1 {
     font-size: 1.5rem;
-
+    margin-top: 0;
   }
 
   img{
-    height: 40vh;
-    margin: 0 10vw 0 10vw;
+    height: 30vh;
+    margin: 2vw 5vw 0 0;
     border-radius: 10px;
     border: 10px solid white;
     box-shadow: 20px 20px 20px 0px rgb(206, 206, 206);
   }
   .textArea{
-    height: 40vh;
-    width: 40vw;
-    padding: 20px;
+    height: 30vh;
+    width: 30vw;
     .texte{
       text-align: justify;
     }
@@ -41,13 +41,14 @@
     }
     .textArea{
       height: 40vh;
-      width: 70vw;
+      width: 80vw;
       margin: 0 10vw;
       .titre{
       text-align: center;
       }
       .texte{
       text-align: justify;
+      font-size: 0.9rem;
       }
     }
   }  
