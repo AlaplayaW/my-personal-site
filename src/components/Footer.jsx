@@ -1,11 +1,12 @@
 import React from "react";
 import "./Footer.scss";
+import Hexagon from "./Hexagon";
 
 
 const Footer = () => {
 	return ( 
     <div className="footer">
-      FOOTER
+      <Hexagon />
       <p>coucou</p>
     </div>
   )

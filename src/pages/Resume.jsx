@@ -202,7 +202,7 @@ function Resume() {
 			<div className="perso">
 			<h1>Compétences</h1>
 				<h2>Techniques <span>+</span> Personnelles</h2>
-				<ul className="hexGrid">
+				<ul className="hexGrid perso">
 				<li className="hex">
 					<div className="hexIn">
 						<div className="hexLink">

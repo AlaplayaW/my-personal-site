@@ -1,0 +1,28 @@
+
+.hexagon{
+  .clip-wrap {
+    text-align: center;
+  }
+  
+  img {
+    vertical-align: middle;
+    // width: 150%;
+    margin: 0 10px;
+  }
+  
+  .font-large {
+    font-size: 36px;	
+  }
+  
+  .clip-svg {
+    width: 0;
+    height: 0;
+  }
+  
+  .clip-polygon {
+        -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        -webkit-clip-path: url("#clip-svg-demo");
+        clip-path: url("#clip-svg-demo");
+  }
+}
