@@ -7,10 +7,10 @@ function Hexagon() {
 			<div class="clip-wrap">
 
 					<img
-					src="http://karenmenezes.com/shapes-polygon/clip-demo.jpg"
+					src={require("../assets/myPict.jpg")}
 					alt="demo-clip-path"
-					width="140"
-					height="140"
+					width="40"
+					height="40"
 					class="clip-polygon"
 				/>
 			</div>
@@ -18,7 +18,7 @@ function Hexagon() {
 			<svg class="clip-svg">
 				<defs>
 					<clipPath id="clip-svg-demo" clipPathUnits="objectBoundingBox">
-						<polygon points="0.25 0, 0.75 0, 1 0.5, 0.75 1, 0.25 1, 0 0.5" />
+						<polygon points="0.5 0, 1 0.25, 1 0.75, 0.5 1, 0 0.75, 0 0.25" />
 					</clipPath>
 				</defs>
 			</svg>

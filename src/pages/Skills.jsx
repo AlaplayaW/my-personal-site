@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.scss";
-import "./Resume.scss";
+import "./Skills.scss";
 import Diagonal from "../components/Diagonal";
 // imports of icons
 import css from "../assets/technos/css3.svg";
@@ -25,7 +25,7 @@ import semantic from "../assets/technos/semantic.png";
 import scrum from "../assets/technos/scrum.svg";
 import postgresql from "../assets/technos/postgresql.svg";
 
-function Resume() {
+function Skills() {
 	return (
 		<div className="skills">
 			<ul className="hexGrid">
@@ -206,7 +206,7 @@ function Resume() {
 				<li className="hex">
 					<div className="hexIn">
 						<div className="hexLink">
-							<p>Oraganisation</p>
+							<p>Organisation</p>
 						</div>
 					</div>
 				</li>
@@ -238,4 +238,4 @@ function Resume() {
 	);
 }
 
-export default Resume;
+export default Skills;

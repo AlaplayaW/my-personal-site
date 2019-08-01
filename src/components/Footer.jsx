@@ -1,13 +1,12 @@
 import React from "react";
 import "./Footer.scss";
-import Hexagon from "./Hexagon";
 
 
 const Footer = () => {
 	return ( 
     <div className="footer">
-      <Hexagon />
-      <p>coucou</p>
+      <p>Copyright © 2019, All rights Reserved. <br/>
+Created by Perrine Martyris</p>
     </div>
   )
   };

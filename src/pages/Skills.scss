@@ -17,7 +17,7 @@
 	h1 {
 		font-size: 1.5rem;
 	}
-	h2 {
+	h2, h3 {
 		font-size: 1rem;
 	}
 
@@ -26,7 +26,7 @@
 		grid-gap: 10px;
 		grid-template-columns: repeat(18, 1fr);
 		width: 50vw;
-		margin: 0 auto;
+		margin: 2vh auto 0;
 		list-style-type: none;
 		overflow: hidden;
 		.hex {
@@ -60,8 +60,8 @@
 			h3 {
 				width: 100%;
 				box-sizing: border-box;
-				background-color: $grey;
-				bottom: 25%;
+				background-color: black;
+				bottom: 35%;
 				padding: 60% 0 10% 0;
 				font-weight: 300;
 				text-align: center;
@@ -109,7 +109,7 @@
 		}
 
 		.hexIn * {
-			background-color: $grey;
+			background-color: black;
 		}
 		.hexLink {
 			display: flex;
@@ -136,6 +136,9 @@
 		/* <- 8-9-4  hexagons per row */
 		.hexGrid {
 			padding-bottom: 3.3%;
+			h3 {
+				font-size: 50%;
+			}
 		}
 		.hex:nth-child(1) {
 			grid-column-start: 2;
@@ -153,7 +156,7 @@
 			}
 			.hexLink {
 				p {
-					font-size: 75%;
+					font-size: 65%;
 				}
 			}
 			.hex:nth-child(1) {
@@ -166,7 +169,9 @@
 		.hexGrid {
 			grid-template-columns: repeat(16, 1fr);
 			padding-bottom: 4.4%;
-			font-size: 18px;
+			h3 {
+				font-size: 50%;
+			}
 		}
 		.hex:nth-child(1) {
 			grid-column-start: 0;
@@ -182,12 +187,9 @@
 			.hex {
 				grid-column-end: span 4;
 			}
-			// .hex:nth-child(1) {
-			// 	grid-column-start: 3;
-			// }
 			.hexLink {
 				p {
-					font-size: 1.1vw;
+					font-size: 65%;
 				}
 			}
 		}
@@ -198,8 +200,8 @@
 			grid-template-columns: repeat(16, 1fr);
 			padding-bottom: 3.3%;
 			width: 70vw;
-			h1 {
-				font-size: 16px;
+			h3 {
+				font-size: 52%;
 			}
 		}
 		.hex:nth-child(1) {
@@ -218,7 +220,7 @@
 			}
 			.hexLink {
 				p {
-					font-size: 80%;
+					font-size: 65%;
 				}
 			}
 			.hex:nth-child(1) {
@@ -231,8 +233,11 @@
 		/* <- 5-4-5-4-3  hexagons per row */
 		.hexGrid {
 			grid-template-columns: repeat(10, 1fr);
-			padding-bottom: 4.4%;
+			padding-bottom: 6.6%;
 			width: 85vw;
+			h3 {
+				font-size: 75%;
+			}
 		}
 		.hex:nth-child(9n + 6) {
 			grid-column-start: 2;
@@ -247,7 +252,7 @@
 			}
 			.hexLink {
 				p {
-					font-size: 80%;
+					font-size: 70%;
 				}
 			}
 		}
@@ -257,7 +262,7 @@
 		.hexGrid {
 			grid-template-columns: repeat(8, 1fr);
 			padding-bottom: 6.6%;
-			width: 85vw;
+			width: 75vw;
 			h3 {
 				font-size: 70%;
 			}
@@ -270,7 +275,7 @@
 		}
 		.perso {
 			h2 {
-				font-size: 70%;
+				font-size: 75%;
 			}
 			.hexGrid {
 				grid-template-columns: repeat(8, 1fr);
@@ -278,7 +283,7 @@
 			}
 			.hexLink {
 				p {
-					font-size: 70%;
+					font-size: 55%;
 				}
 			}
 		}

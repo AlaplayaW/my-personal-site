@@ -5,18 +5,19 @@
 	text-align: unset;
 	position: relative;
 	display: grid;
-	grid-template-columns: 10% 80% 10%;
-	grid-template-rows: 50% 15% 25% 10%;
+	grid-template-columns: 10vw 80vw 10vw;
+	grid-template-rows: 50vh 15vh 25vh 10vh;
 	
 	img {
+		position: fixed;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		-webkit-transform: scaleX(-1);
 		transform: scaleX(-1);
 		filter: grayscale(100%) opacity(100%) blur(0px) brightness(40%);
 		-webkit-filter: grayscale(100%) opacity(100%) blur(0px) brightness(40%);
 		overflow: hidden;
-	
+
 		grid-column: 1 / all;
 		grid-row: 1 / all;
 		z-index: -1;
@@ -40,7 +41,7 @@
 	grid-template-rows: 3fr 1fr 1fr;
 	margin: 2vh 0;
 	h1 {
-  color: $text-color-grey;
+  	color: $text-color-lightgrey;
 	font-size: 2.5rem;
 	align-self: end;
 	}
@@ -61,7 +62,7 @@
 }
 
 .socialIcons {
-  color: $text-color-grey;
+  color: $text-color-lightgrey;
 	height: 20px;
   padding-right: 10px;
 }
@@ -74,7 +75,7 @@
 .bounce {
 	grid-column: 2/3;
 	grid-row: 3/4;
-  color: $text-color-grey;
+  color: $text-color-lightgrey;
 	-webkit-animation-name: bounce;
   animation-name: bounce;
   animation-duration: 2s;
