@@ -103,11 +103,9 @@
 	}
 
 	.perso {
-		min-height: 40vh;
 		.hexGrid {
 			padding-bottom: 50px;
 		}
-
 		.hexIn * {
 			background-color: black;
 		}
@@ -246,6 +244,7 @@
 			grid-column-start: 3;
 		}
 		.perso {
+		min-height: 40vh;
 			.hexGrid {
 				grid-template-columns: repeat(8, 1fr);
 				padding-bottom: 6.6%;
@@ -274,6 +273,7 @@
 			grid-column-start: 2;
 		}
 		.perso {
+			min-height: 30vh;
 			h2 {
 				font-size: 75%;
 			}

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import DocsRedux from './pages/DocsRedux';
-import NavBar from './components/Nav';
+import NavBar from './components/Nav2';
 import Footer from './components/Footer';
 
 class App extends Component {
