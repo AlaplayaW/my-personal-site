@@ -1,3 +1,6 @@
+@import "../sass/main.scss";
+
+
 .portfolio {
   background-image: linear-gradient(white, rgb(235, 235, 235));
   max-width: 100%;
@@ -24,6 +27,7 @@
       border: 1px solid rgba(0, 0, 0, 0.13);
       max-width: 250px;
       margin: 5px;
+      background-color: #fff;
       h3 {
         margin-top: 10px;
         font-size: 1.2rem;
@@ -45,8 +49,8 @@
           display: block;
           object-fit: cover;
           max-width: 100%;
-          filter: brightness(80%);
-          -webkit-filter: brightness(80%);
+          filter: brightness(100%);
+          -webkit-filter: brightness(100%);
           -webkit-transition: -webkit-filter 0.5s ease-out;
           transition: filter 0.5s ease-out;
         }
@@ -55,8 +59,6 @@
             display: block;
             color: white;
             padding: 20px;
-            filter: brightness(80%);
-            -webkit-filter: brightness(80%);
             align-items: center;
             justify-self: center;
           }
@@ -93,6 +95,21 @@
           -webkit-transition: all 0.5s;
           -o-transition: all 0.5s;
           transition: all 0.5s;
+        }
+      }
+      .technos {
+        ul {
+          display: flex;
+          flex-flow: row wrap;
+            margin: 10px;
+            font-size: 0.7rem;
+            justify-content: center;
+          li {
+            padding: 2px 5px;
+            margin: 3px;
+            border: 1px solid $text-color-grey;
+            color: #111;
+          }
         }
       }
     }

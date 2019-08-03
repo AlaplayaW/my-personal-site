@@ -9,9 +9,10 @@ function Portfolio() {
 			<div className="projects">
 				<div className="card">
 					<div className="image">
-						<a href="https://yukids.netlify.com">
+						<a href="https://yukids.netlify.com" target="_blank"
+									rel="noopener noreferrer">
 								<img
-									src={require("../assets/portfolio/Yukids.png")}
+									src={require("../assets/portfolio/MonSite.png")}
 									alt="mon site"
 								/>
 								<p>En cours de construction.</p>
@@ -24,21 +25,32 @@ function Portfolio() {
 						<a
 								className="button"
 								href="https://yukids.netlify.com"
+								target="_blank" 
+								rel="noopener noreferrer"
 						>
 								Site
 						</a>
 						<a
 							className="button"
 							href="https://github.com/AlaplayaW/wcs-project2-Yuka"
+							target="_blank" 
+							rel="noopener noreferrer"
 						>
 							Github
 						</a>
+					</div>
+					<div className="technos">
+						<ul>
+							<li>React</li>
+							<li>Sass</li>
+						</ul>
 					</div>
 					</div>
 				</div>
 				<div className="card">
 						<div className="image">
-							<a href="https://up-day.web.app">
+							<a href="https://up-day.web.app" target="_blank" 
+									rel="noopener noreferrer">
 									<img
 										src={require("../assets/portfolio/UpDay.png")}
 										alt="upday"
@@ -54,21 +66,35 @@ function Portfolio() {
 						<h3>Up Day Mobile</h3>
 						<p>(projet collectif réel)</p>
 						<div className="buttons">
-							<a className="button" href="https://up-day.web.app">
+							<a className="button" 
+									href="https://up-day.web.app"
+									target="_blank" 
+									rel="noopener noreferrer">
 									Site
 							</a>
 							<a
 									className="button"
 									href="https://github.com/AlaplayaW/up-day-mobile"
+									target="_blank" 
+									rel="noopener noreferrer"
 							>
 									Github
 							</a>
 						</div>
+						<div className="technos">
+						<ul>
+							<li>React</li>
+							<li>Redux</li>
+							<li>Sass</li>
+							<li>Axios</li>
+						</ul>
+					</div>
 						</div>
 				</div>
 				<div className="card">
 						<div className="image">
-							<a href="https://up-day-admin.web.app">
+							<a href="https://up-day-admin.web.app" target="_blank" 
+									rel="noopener noreferrer">
 									<img
 										src={require("../assets/portfolio/UpDayAdmin.png")}
 										alt="upday"
@@ -86,21 +112,34 @@ function Portfolio() {
 							<a
 									className="button"
 									href="https://up-day-admin.web.app"
+									target="_blank" 
+									rel="noopener noreferrer"
 							>
 									Site
 							</a>
 							<a
 									className="button"
 									href="https://github.com/AlaplayaW/up-day-admin"
+									target="_blank" 
+									rel="noopener noreferrer"
 							>
 									Github
 							</a>
 						</div>
+						<div className="technos">
+						<ul>
+							<li>React</li>
+							<li>Redux</li>
+							<li>Semantic</li>
+							<li>Axios</li>
+						</ul>
+					</div>
 						</div>
 				</div>
 				<div className="card">
 						<div className="image">
-							<a href="https://yukids.netlify.com">
+							<a href="https://yukids.netlify.com" target="_blank" 
+									rel="noopener noreferrer">
 									<img
 										src={require("../assets/portfolio/Yukids.png")}
 										alt="yukids"
@@ -118,16 +157,27 @@ function Portfolio() {
 							<a
 									className="button"
 									href="https://yukids.netlify.com"
+									target="_blank" 
+									rel="noopener noreferrer"
 							>
 									Site
 							</a>
 							<a
 									className="button"
 									href="https://github.com/AlaplayaW/wcs-project2-Yuka"
+									target="_blank" 
+									rel="noopener noreferrer"
 							>
 									Github
 							</a>
 						</div>
+						<div className="technos">
+						<ul>
+							<li>React</li>
+							<li>Bootstrap</li>
+							<li>Axios</li>
+						</ul>
+					</div>
 						</div>
 				</div>
 			</div>

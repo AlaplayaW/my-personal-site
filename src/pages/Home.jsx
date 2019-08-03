@@ -12,12 +12,12 @@ import "./Home.scss";
 
 function Home() {
 	return (
-		<div className="home">
+		<div className="home" id="top">
 			<img src={surfboardOnTheBeach} alt="surfboard on the beach" />
 			<div className="typed">
-				<h1>Welcome in my World!</h1>
+				<h1>Perrine Martyris</h1>
 				{/* <h2 className="row1">Perrine </h2> */}
-				<h2 className="row2">Perrine . <MyTyped
+				<h2 className="row2"><MyTyped
 						dataText={["Développeuse . Web . Junior"]}
 						/>
 				</h2>
