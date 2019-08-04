@@ -44,7 +44,8 @@ const NavBar = props => {
 
 	return (
 		<header className={`${headerStyle} ${toggleNavStyle} header`}>
-			<div className="logo"><a href="#top">PM</a></div>
+			<div className="logo"><a href="#top"><img src="../favicon.ico " alt=""/></a></div>
+			{/* <div className="logo"><a href="#top">PM</a></div> */}
 			{(!isSmallScreen || isNavVisible) && (
 			<nav className="navLinks">
 				<Link
