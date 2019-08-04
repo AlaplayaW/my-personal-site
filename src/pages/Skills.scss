@@ -1,0 +1,291 @@
+@import "../sass/variables.scss";
+
+.skills {
+	margin: auto;
+	min-height: 100vh;
+	position: relative;
+	background-image: linear-gradient(white, rgb(235, 235, 235));
+
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	h1, h2 {
+		margin: 10px auto;
+		text-align: center;
+	}
+	h1 {
+		font-size: 1.5rem;
+	}
+	h2, h3 {
+		font-size: 1rem;
+	}
+
+	.hexGrid {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(18, 1fr);
+		width: 50vw;
+		margin: 2vh auto 0;
+		list-style-type: none;
+		overflow: hidden;
+		.hex {
+			grid-column-end: span 2;
+			position: relative;
+			visibility: hidden;
+			outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+			&::after {
+				content: "";
+				display: block;
+				padding-bottom: 86.602%; /* =  100 / tan(60) * 1.5 */
+			}
+			img {
+				left: -100%;
+				right: -100%;
+				top: -25%;
+				width: auto;
+				height: 150%;
+				margin: 0 auto;
+				-webkit-transform: rotate3d(0, 0, 0, 0deg);
+				-ms-transform: rotate3d(0, 0, 0, 0deg);
+				transform: rotate3d(0, 0, 0, 0deg);
+				&[alt="mySql"],
+				&[alt="git"],
+				&[alt="bootstrap"],
+				&[alt="semantic"] {
+					height: 108%;
+					top: -5%;
+				}
+			}
+			h3 {
+				width: 100%;
+				box-sizing: border-box;
+				background-color: black;
+				bottom: 35%;
+				padding: 60% 0 10% 0;
+				font-weight: 300;
+				text-align: center;
+				z-index: 1;
+		
+				-webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.3s ease-out;
+				transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+				-webkit-transform: translate3d(0, -100%, 0);
+				-ms-transform: translate3d(0, -100%, 0);
+				transform: translate3d(0, -100%, 0);
+			}
+		}
+		.hexIn {
+			position: absolute;
+			width: 100%;
+			padding-bottom: 115.47%; /* =  width / sin(60) */
+			overflow: hidden;
+			visibility: hidden;
+			outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+			-webkit-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+			-ms-transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+			transform: rotate3d(0, 0, 1, -60deg) skewY(30deg);
+		}
+		.hexIn * {
+			position: absolute;
+			visibility: visible;
+			outline: 1px solid transparent; /* fix for jagged edges in FF on hover transition */
+		}
+		.hexLink {
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			overflow: hidden;
+			-webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+			-ms-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+			transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
+		}
+	}
+
+	.perso {
+		.hexGrid {
+			padding-bottom: 50px;
+		}
+		.hexIn * {
+			background-color: black;
+		}
+		.hexLink {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+			p {
+				color: #fff;
+				font-size: 1rem;
+				text-align: center;
+				margin: 0;
+			}
+		}
+	}
+	/*** HOVER EFFECT  **********************************************************************/
+	.hexLink:hover h3,
+	.hexLink:focus h3 {
+		-webkit-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+	@media (min-width: 1001px) {
+		/* <- 8-9-4  hexagons per row */
+		.hexGrid {
+			padding-bottom: 3.3%;
+			h3 {
+				font-size: 50%;
+			}
+		}
+		.hex:nth-child(1) {
+			grid-column-start: 2;
+		}
+		.hex:nth-child(12n + 10) {
+			grid-column-start: 0;
+		}
+		.hex:nth-child(18) {
+			grid-column-start: 6;
+		}
+		.perso {
+			.hexGrid {
+				grid-template-columns: repeat(12, 1fr);
+				padding-bottom: 6.6%;
+			}
+			.hexLink {
+				p {
+					font-size: 65%;
+				}
+			}
+			.hex:nth-child(1) {
+				grid-column-start: 3;
+			}
+		}
+	}
+	@media (max-width: 1000px) and(min-width:801px) {
+		/* <- 8-7-6  hexagons per row */
+		.hexGrid {
+			grid-template-columns: repeat(16, 1fr);
+			padding-bottom: 4.4%;
+			h3 {
+				font-size: 50%;
+			}
+		}
+		.hex:nth-child(1) {
+			grid-column-start: 0;
+		}
+		.hex:nth-child(13n + 9) {
+			grid-column-start: 2;
+		}
+		.hex:nth-child(16) {
+			grid-column-start: 3;
+		}
+		.perso {
+			width: 50vw;
+			.hex {
+				grid-column-end: span 4;
+			}
+			.hexLink {
+				p {
+					font-size: 65%;
+				}
+			}
+		}
+	}
+	@media (max-width: 800px) and (min-width: 601px) {
+		/* <- 8-7-6  hexagons per row */
+		.hexGrid {
+			grid-template-columns: repeat(16, 1fr);
+			padding-bottom: 3.3%;
+			width: 70vw;
+			h3 {
+				font-size: 52%;
+			}
+		}
+		.hex:nth-child(1) {
+			grid-column-start: 0;
+		}
+		.hex:nth-child(13n + 9) {
+			grid-column-start: 2;
+		}
+		.hex:nth-child(16) {
+			grid-column-start: 3;
+		}
+		.perso {
+			.hexGrid {
+				grid-template-columns: repeat(10, 1fr);
+				padding-bottom: 6.6%;
+			}
+			.hexLink {
+				p {
+					font-size: 65%;
+				}
+			}
+			.hex:nth-child(1) {
+				grid-column-start: 2;
+			}
+		}
+	}
+
+	@media (max-width: 600px) and (min-width: 431px) {
+		/* <- 5-4-5-4-3  hexagons per row */
+		.hexGrid {
+			grid-template-columns: repeat(10, 1fr);
+			padding-bottom: 6.6%;
+			width: 85vw;
+			h3 {
+				font-size: 75%;
+			}
+		}
+		.hex:nth-child(9n + 6) {
+			grid-column-start: 2;
+		}
+		.hex:nth-child(19) {
+			grid-column-start: 3;
+		}
+		.perso {
+		min-height: 40vh;
+			.hexGrid {
+				grid-template-columns: repeat(8, 1fr);
+				padding-bottom: 6.6%;
+			}
+			.hexLink {
+				p {
+					font-size: 70%;
+				}
+			}
+		}
+	}
+	@media (max-width: 430px) {
+		/* <- 5-4-5-4-3  hexagons per row */
+		.hexGrid {
+			grid-template-columns: repeat(8, 1fr);
+			padding-bottom: 6.6%;
+			width: 75vw;
+			h3 {
+				font-size: 70%;
+			}
+		}
+		.hex:nth-child(7n + 5) {
+			grid-column-start: 2;
+		}
+		.hex:nth-child(19) {
+			grid-column-start: 2;
+		}
+		.perso {
+			min-height: 30vh;
+			h2 {
+				font-size: 75%;
+			}
+			.hexGrid {
+				grid-template-columns: repeat(8, 1fr);
+				padding-bottom: 6.6%;
+			}
+			.hexLink {
+				p {
+					font-size: 55%;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,132 @@
+@import "../sass/main.scss";
+
+
+.portfolio {
+  background-image: linear-gradient(white, rgb(235, 235, 235));
+  max-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  .projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    .card {
+      border: 1px solid rgba(0, 0, 0, 0.13);
+      max-width: 250px;
+      margin: 5px;
+      background-color: #fff;
+      h3 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .image {
+        position: relative;
+
+        p{
+          color: transparent;
+          z-index: 5;
+          position: absolute;
+          top: 30%;
+          width: 100%;
+        }
+        img {
+          display: block;
+          object-fit: cover;
+          max-width: 100%;
+          filter: brightness(100%);
+          -webkit-filter: brightness(100%);
+          -webkit-transition: -webkit-filter 0.5s ease-out;
+          transition: filter 0.5s ease-out;
+        }
+        &:hover {
+          p{
+            display: block;
+            color: white;
+            padding: 20px;
+            align-items: center;
+            justify-self: center;
+          }
+          img{
+            filter: brightness(10%);
+            -webkit-filter: brightness(10%);
+
+          }
+        }
+      }
+      .buttons {
+        margin: 10px;
+        height: 40px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .button {
+          background-color: #111;
+          border: 1px solid #111;
+          font-size: 12px;
+          color: #fff;
+          line-height: 30px;
+          display: inline-block;
+          padding: 0 20px;
+          text-decoration: none;
+          margin: 10px;
+          width: 100px;
+        }
+        .button:hover {
+          background-color: transparent;
+          color: #666;
+        }
+        .button, .button:hover {
+          -webkit-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+        }
+      }
+      .technos {
+        ul {
+          display: flex;
+          flex-flow: row wrap;
+            margin: 10px;
+            font-size: 0.7rem;
+            justify-content: center;
+          li {
+            padding: 2px 5px;
+            margin: 3px;
+            border: 1px solid $text-color-grey;
+            color: #111;
+          }
+        }
+      }
+    }
+  }
+}
+
+// @keyframes slideInDown {
+//     from {
+//       transform: translate3d(0, -100%, 0);
+//       visibility: visible;
+//     }
+
+//     to {
+//       transform: translate3d(0, 0, 0);
+//     }
+//   }
+
+//   .slideInDown {
+//     animation-name: slideInDown;
+//   }

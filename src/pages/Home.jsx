@@ -12,17 +12,16 @@ import "./Home.scss";
 
 function Home() {
 	return (
-		<div className="home">
+		<div className="home" id="top">
 			<img src={surfboardOnTheBeach} alt="surfboard on the beach" />
-			<h1 className="typed">
-				Welcome, I am Perrine!
-				<h2>
-					Searching for{" "}
-					<MyTyped
-						dataText={["an internship", "a job of Junior Developper"]}
+			<div className="typed">
+				<h1>Perrine Martyris</h1>
+				{/* <h2 className="row1">Perrine </h2> */}
+				<h2 className="row2"><MyTyped
+						dataText={["Développeuse . Web . Junior"]}
 						/>
 				</h2>
-			</h1>
+			</div>
 			<SocialBar />
 			{/* Click on double angle down to go to about section  */}
 			<Link

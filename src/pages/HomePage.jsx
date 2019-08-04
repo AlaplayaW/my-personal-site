@@ -1,7 +1,8 @@
 import React from "react";
 import Home from "./Home";
 import About from "./About";
-import Resume from "./Resume";
+import Portfolio from "./Portfolio";
+import Skills from "./Skills";
 // import "../App.scss";
 
 
@@ -11,7 +12,8 @@ function HomePage() {
 		<div className="homePage">
 			<Home />
 			<About />
-			<Resume />
+			<Skills />
+			<Portfolio />
 		</div>
 	);
 }

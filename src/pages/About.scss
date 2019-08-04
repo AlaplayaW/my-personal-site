@@ -1,53 +1,76 @@
-@import "../sass/variables.scss";
+@import "../sass/main.scss";
 
 .about {
   background-image:linear-gradient(white, rgb(235, 235, 235));
   height: 100vh;
   width: 100%;
   position: relative;
+  margin: auto;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  h1 {
-    font-size: 1.5rem;
 
-  }
 
   img{
-    height: 40vh;
-    margin: 0 10vw 0 10vw;
-    border-radius: 10px;
-    border: 10px solid white;
+    height: 30vh;
+    margin: auto 5vw auto 0;
+    border: 5px solid #111;
     box-shadow: 20px 20px 20px 0px rgb(206, 206, 206);
+    align-self: flex-start;
   }
   .textArea{
-    height: 40vh;
     width: 40vw;
-    padding: 20px;
-    .texte{
+    text-align: center;
+    h1 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      text-align: left;
+    }
+    p{
       text-align: justify;
+    }
+    a{
+      background-color: #111;
+      border: 1px solid #111;
+      font-size: 12px;
+      color: #fff;
+      line-height: 35px;
+      display: inline-block;
+      padding: 0 20px;
+      text-decoration: none;
+      margin: 15px auto;
+    }
+    a:hover {
+      background-color: transparent;
+      color: #666;
+    }
+    a, a:hover {
+      -webkit-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
     }
   }
 }
 
 @media (max-width: 700px) {
   .about {
+    align-content: flex-start;
     img{
       height: 25vh;
-      margin: 3vh 0;
+      margin: 15vh 0 0;
     }
     .textArea{
-      height: 40vh;
-      width: 70vw;
+      width: 80vw;
       margin: 0 10vw;
-      .titre{
+      h1{
       text-align: center;
       }
-      .texte{
+      p{
       text-align: justify;
+      font-size: 0.9rem;
       }
     }
   }  

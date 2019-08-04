@@ -1,0 +1,15 @@
+@import "../sass/main.scss";
+
+.footer{
+background-color: black;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 200px;
+p {
+    font-size: 14px;
+    color: $text-color-grey;
+    line-height: 27px;
+    text-align: center;
+}
+}

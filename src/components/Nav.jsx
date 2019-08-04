@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
+
+
 import "./Nav.scss";
 
 const NavBar = props => {
@@ -42,21 +45,45 @@ const NavBar = props => {
 		}
 	};
 
-	const headerClassName = `${(scroll < top - 70) ? "transpNav" : "whiteNav"}`
-	
+	const headerStyle = `${(scroll < top - 70) ? "transpNav" : "whiteNav"}`;
+	// const toggleNavStyle = isNavVisible ? "cross" : "paralel";
 	
 	return (
 		
 		<header className="">
-			<div className={`${headerClassName} header`}>
-				<img src={require("../assets/logo.svg")} className="logo" alt="logo" />
+			<div className={`${headerStyle} header`}>
+				<div className="logo">PERRINE</div>
 				{(!isSmallScreen || isNavVisible) && (
 				<nav className="navLinks">
-					<NavLink to="/">Home</NavLink>
-					<NavLink to="/about">About</NavLink>
+					<Link
+				activeClass="active"
+				to="home"
+				spy={true}
+				smooth={true}
+				offset={0}
+				duration={500}
+			>Accueil</Link>
+					<Link
+				activeClass="active"
+				to="about"
+				spy={true}
+				smooth={true}
+				offset={0}
+				duration={500}
+			>A propos</Link>
+								<Link
+				activeClass="active"
+				to="skills"
+				spy={true}
+				smooth={true}
+				offset={0}
+				duration={500}
+			>Compétences</Link>
 					<NavLink to="/docsredux">Redux Docs</NavLink>
 				</nav>)}
-				<button onClick={toggleNav} className="burger" >X</button>
+				<button onClick={toggleNav} className="burger">
+					<div></div>
+				</button>
 			</div>
 		</header>
 	);
