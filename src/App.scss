@@ -6,15 +6,15 @@
   grid-template-rows: auto 1fr 8vh;
   grid-template-areas:
     "header"
-    "main"
+    "body"
     "footer";
   .header {
     grid-area: header;
     position: fixed;
     top: 0;
   }
-  .homePage, .reduxPage {
-    grid-area: main;
+  .body, .reduxPage {
+    grid-area: body;
   }
   .footer {
     grid-area: footer;

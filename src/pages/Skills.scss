@@ -25,7 +25,7 @@
 		display: grid;
 		grid-gap: 10px;
 		grid-template-columns: repeat(18, 1fr);
-		width: 50vw;
+		width: 60vw;
 		margin: 2vh auto 0;
 		list-style-type: none;
 		overflow: hidden;
@@ -135,7 +135,7 @@
 		.hexGrid {
 			padding-bottom: 3.3%;
 			h3 {
-				font-size: 50%;
+				font-size: 60%;
 			}
 		}
 		.hex:nth-child(1) {

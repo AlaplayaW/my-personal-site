@@ -1,15 +1,15 @@
 import React from "react";
+
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
-// import "../App.scss";
 
 
-function HomePage() {
+function Body() {
 	
 	return (
-		<div className="homePage">
+		<div className="body">
 			<Home />
 			<About />
 			<Skills />
@@ -18,4 +18,4 @@ function HomePage() {
 	);
 }
 
-export default HomePage;
+export default Body;
