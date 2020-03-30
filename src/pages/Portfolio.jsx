@@ -9,13 +9,15 @@ function Portfolio() {
 			<div className="projects">
 				<div className="card">
 					<div className="image">
-						<a href="https://yukids.netlify.com" target="_blank"
-									rel="noopener noreferrer">
-								<img
-									src={require("../assets/portfolio/MonSite.png")}
-									alt="mon site"
-								/>
-								<p>En cours de construction.</p>
+            <a 
+              href="https://www.perrinemartyris.com" 
+              target="_blank"
+							rel="noopener noreferrer">
+              <img
+                src={require("../assets/portfolio/MonSite.png")}
+                alt="mon site"
+              />
+              <p>En cours de construction.</p>
 						</a>
 					</div>
 					<div className="body">
@@ -24,7 +26,7 @@ function Portfolio() {
 					<div className="buttons">
 						<a
 								className="button"
-								href="https://yukids.netlify.com"
+								href="https://www.perrinemartyris.com"
 								target="_blank" 
 								rel="noopener noreferrer"
 						>
@@ -32,7 +34,7 @@ function Portfolio() {
 						</a>
 						<a
 							className="button"
-							href="https://github.com/AlaplayaW/wcs-project2-Yuka"
+							href="https://github.com/AlaplayaW/my-personal-site"
 							target="_blank" 
 							rel="noopener noreferrer"
 						>
