@@ -10,7 +10,7 @@ function Portfolio() {
 				<div className="card">
 					<div className="image">
             <a 
-              href="https://www.perrinemartyris.com" 
+              href="https://perrinemartyris.com" 
               target="_blank"
 							rel="noopener noreferrer">
               <img
@@ -26,7 +26,7 @@ function Portfolio() {
 					<div className="buttons">
 						<a
 								className="button"
-								href="https://www.perrinemartyris.com"
+								href="https://perrinemartyris.com"
 								target="_blank" 
 								rel="noopener noreferrer"
 						>
