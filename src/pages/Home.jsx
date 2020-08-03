@@ -18,7 +18,7 @@ function Home() {
 				<h1>Perrine Martyris</h1>
 				{/* <h2 className="row1">Perrine </h2> */}
 				<h2 className="row2"><MyTyped
-						dataText={["Développeuse . Web . Junior"]}
+						dataText={["Développeuse . Web & Mobile"]}
 						/>
 				</h2>
 			</div>
