@@ -3,13 +3,20 @@
 .footer{
 background-color: black;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
 height: 200px;
-p {
-    font-size: 14px;
-    color: $text-color-grey;
-    line-height: 27px;
-    text-align: center;
-}
+    p {
+        font-size: 14px;
+        color: $text-color-grey;
+        line-height: 27px;
+        text-align: center;
+    }
+    .o2switch-link {
+        padding: 20px;
+    }
+    .o2switch-logo {
+        width: 100px;
+    }
 }
