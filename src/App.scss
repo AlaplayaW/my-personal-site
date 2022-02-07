@@ -18,6 +18,14 @@
   }
   .footer {
     grid-area: footer;
+    display: flex;
+    flex-direction: column;
+  }
+  .o2switch-link {
+    padding: 20px;
+  }
+  .o2switch-logo {
+    width: 100px;
   }
 }
 
