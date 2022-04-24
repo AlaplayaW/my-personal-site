@@ -248,6 +248,39 @@ function Portfolio() {
                         </div>
                     </div>
                 </div>
+                <div className="card">
+                    <div className="image">
+                        <a href="https://lesbains-biarritz.com" target="_blank"
+                        rel="noopener noreferrer">
+                            <img
+                                src={require("../assets/portfolio/LesBainsBiarritz.png")}
+                                alt="restaurant les bains biarritz"
+                            />
+                            <p>
+                                Site pour un restaurant sur la plage de la Côte des basques à Biarritz.
+                            </p>
+                        </a>
+                    </div>
+                    <div className="body">
+                        <h3>Les Bains Biarritz</h3>
+                        <p>(commande client)</p>
+                        <div className="buttons">
+                            <a
+                                className="button"
+                                href="https://lesbains-biarritz.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Site
+                            </a>
+                        </div>
+                        <div className="technos">
+                            <ul>
+                                <li>Wordpress</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
