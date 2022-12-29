@@ -1,14 +1,14 @@
 import React from "react";
 import "../App.scss";
 import "./Skills.scss";
-import Diagonal from "../components/Diagonal";
+// import Diagonal from "../components/Diagonal";
 // imports of icons
 import css from "../assets/technos/css3.svg";
 import html from "../assets/technos/html.svg";
 import javascript from "../assets/technos/javascript.svg";
 import react from "../assets/technos/react.svg";
 import node from "../assets/technos/node.svg";
-import mySql from "../assets/technos/mySql.svg";
+import mySql from "../assets/technos/mysql.svg";
 import git from "../assets/technos/git.svg";
 import github from "../assets/technos/github.svg";
 import bootstrap from "../assets/technos/bootstrap.svg";
@@ -199,6 +199,7 @@ function Skills() {
 				</li>
 			</ul>
 
+			{/*
 			<div className="perso">
 			<h1>COMPÉTENCES</h1>
 				<h2>Techniques <span>+</span> Personnelles</h2>
@@ -234,7 +235,10 @@ function Skills() {
 				</ul>
 			</div>
 			<Diagonal />
-		</div>
+	*/}
+
+	</div>
+
 	);
 }
 
